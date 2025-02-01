@@ -1,0 +1,164 @@
+/* Smooth scrolling enabled */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Full page height fixed */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(54deg, #ff0090, #ff8800);
+    color: #fff;
+}
+
+/* Scrollable page with full access */
+header, section, footer {
+    position: relative;
+    z-index: 10;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(42, 0, 77, 0.9);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Contact Button at Top Right */
+.contact-btn {
+    background: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+    background: #e68900;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+#hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('img/construction-bg.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+    padding: 20px;
+}
+
+/* Responsive adjustments for Hero Section */
+@media (max-width: 768px) {
+    #hero {
+        font-size: 2rem;
+        padding: 40px 20px;
+    }
+}
+
+/* Sections */
+#projects, #contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff9800;
+}
+
+/* Responsive Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 30%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Fix gallery on mobile */
+@media (max-width: 768px) {
+    .gallery img {
+        width: 90%;
+    }
+}
+
+/* Contact Section */
+#contact a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #ff9800;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: #fdd835;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(99, 24, 79, 0.8);
+    color: white;
+}
+
+/* Lightbox - Fullscreen Image Viewer */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+#lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
