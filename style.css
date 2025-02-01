@@ -132,7 +132,7 @@ h2 {
 /* Make email font smaller on mobile */
 @media (max-width: 768px) {
     #contact a {
-        font-size: 0.8rem; /* Adjust as needed */
+        font-size: 0.9rem; /* Adjust as needed */
     }
 }
 
