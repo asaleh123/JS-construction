@@ -129,6 +129,13 @@ h2 {
     color: #fdd835;
 }
 
+/* Make email font smaller on mobile */
+@media (max-width: 768px) {
+    #contact a {
+        font-size: 1rem; /* Adjust as needed */
+    }
+}
+
 /* Footer */
 footer {
     text-align: center;
