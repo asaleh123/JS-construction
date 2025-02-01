@@ -23,7 +23,7 @@ header, section, footer {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 15px 20px;
     background: rgba(42, 0, 77, 0.9);
     color: white;
@@ -44,7 +44,10 @@ header {
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s ease-in-out;
+    margin-left: auto;  /* Push to the right */
+    margin-right: 44px; /* Adjust spacing */
 }
+
 
 .contact-btn:hover {
     background: #e68900;
@@ -161,4 +164,26 @@ footer {
     font-size: 2rem;
     color: white;
     cursor: pointer;
+}
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 1.8rem; /* Reduce hero title size */
+    }
+    
+    #hero h2 {
+        font-size: 1.2rem; /* Reduce subtitle size */
+    }
+
+    .contact-btn {
+        font-size: 1rem; /* Reduce contact button text */
+        padding: 8px 16px; /* Make button smaller */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Reduce section titles */
+    }
+
+    p, a {
+        font-size: 1rem; /* Reduce text size */
+    }
 }
